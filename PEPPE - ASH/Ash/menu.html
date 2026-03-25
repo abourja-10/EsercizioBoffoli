@@ -3,74 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menù | Ristorante Atelier</title>
+    <title>Le Grand Menu | Atelier</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     
     <style>
-        /* Sfondo con il gradiente gourmet che abbiamo scelto */
         body {
             margin: 0;
             padding: 0;
             min-height: 100vh;
             background: linear-gradient(135deg, #1a1a1a 0%, #3e2723 100%);
             background-attachment: fixed;
-            color: #f3e5ab; /* Colore Champagne per il testo */
+            color: #f3e5ab;
             font-family: 'Lato', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
 
         header {
             text-align: center;
-            padding: 60px 20px;
+            margin-bottom: 80px;
         }
 
-        /* Titolo H1 con l'effetto oro che abbiamo creato */
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 4rem;
+            font-size: 5rem;
             margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 5px;
             background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+            letter-spacing: 8px;
+            text-transform: uppercase;
         }
 
-        .subtitle {
-            font-style: italic;
-            letter-spacing: 2px;
-            color: #d4af37;
-            margin-top: 10px;
-        }
-
-        .menu-container {
-            max-width: 800px;
-            width: 90%;
-            margin-bottom: 100px;
-        }
-
-        .menu-section {
-            margin-top: 50px;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-            padding-bottom: 20px;
-        }
-
-        h2 {
+        .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: #d4af37;
             text-align: center;
-            text-transform: lowercase;
-            font-variant: small-caps;
+            margin: 60px 0 30px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            display: block;
         }
 
         .menu-item {
-            margin: 40px 0;
-            text-align: center;
+            margin-bottom: 50px;
+            text-align: left;
         }
 
         .item-header {
@@ -78,98 +60,118 @@
             justify-content: space-between;
             align-items: baseline;
             font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            font-weight: bold;
+            font-size: 1.6rem;
+            color: #fcf6ba;
         }
 
         .dots {
             flex-grow: 1;
-            border-bottom: 1px dotted rgba(243, 229, 171, 0.3);
+            border-bottom: 1px dotted rgba(212, 175, 55, 0.4);
             margin: 0 15px;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            color: #d4af37;
         }
 
         .description {
             font-style: italic;
-            font-weight: 300;
-            margin-top: 10px;
-            color: #d7ccc8;
+            font-size: 1.1rem;
             line-height: 1.6;
+            color: #d7ccc8;
+            margin-top: 10px;
         }
 
-        /* La tua descrizione approfondita "buonissima" */
+        /* Box per la descrizione approfondita */
         .gusto-focus {
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid #d4af37;
+            padding: 15px 25px;
+            margin: 20px 0;
+            font-style: italic;
             color: #fcf6ba;
-            border-left: 2px solid #d4af37;
-            padding-left: 20px;
-            margin: 15px auto;
-            max-width: 600px;
-            text-align: left;
         }
 
         footer {
+            text-align: center;
+            margin-top: 100px;
             padding: 40px;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-            opacity: 0.7;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
         }
     </style>
-    <link rel="icon" type="image/x-icon" href="icona.jpg">
 </head>
 <body>
 
+<div class="container">
     <header>
         <h1>Atelier</h1>
-        <div class="subtitle">Laboratorio di Sapori Contemporanei</div>
+        <p style="letter-spacing: 3px; color: #d4af37;">L'ARTE DELL'ALTA CUCINA</p>
     </header>
 
-    <div class="menu-container">
-        
-        <div class="menu-section">
-            <h2>Gli Esordi</h2>
-            <div class="menu-item">
-                <div class="item-header">
-                    <span>Incontro Profumato</span>
-                    <span class="dots"></span>
-                    <span>€22</span>
-                </div>
-                <p class="description">Capasanta scottata alla griglia su caponata siciliana in agrodolce e petali eduli.</p>
-            </div>
+    <span class="section-title">Gli Esordi</span>
+    
+    <div class="menu-item">
+        <div class="item-header">
+            <span>Incontro Profumato</span>
+            <span class="dots"></span>
+            <span class="price">€22</span>
         </div>
+        <p class="description">Capasanta scottata alla griglia su caponata siciliana in agrodolce e petali eduli.</p>
+    </div>
 
-        <div class="menu-section">
-            <h2>L'Anima del Gusto</h2>
-            <div class="menu-item">
-                <div class="item-header">
-                    <span>Il Carrè dell'Atelier</span>
-                    <span class="dots"></span>
-                    <span>€34</span>
-                </div>
-                <p class="description">Agnello in crosta di pistacchi e clorofilla, carote baby al miele e vellutata di radici bianche.</p>
-                <div class="gusto-focus">
-                    Il momento dell'assaggio è una rivelazione: la croccantezza sapida della crosta si scioglie in una carne incredibilmente tenera, sprigionando un'armonia di sapori che avvolge il palato in un calore profondo e persistente. Semplicemente divino.
-                </div>
-            </div>
+    <span class="section-title">Orizzonti Marini</span>
+
+    <div class="menu-item">
+        <div class="item-header">
+            <span>L'Oro del Tirreno</span>
+            <span class="dots"></span>
+            <span class="price">€28</span>
         </div>
+        <p class="description">Ombrina scottata su vellutata di patate Ratte allo zafferano, frutti di bosco acidulati e fiori di borragine.</p>
+    </div>
 
-        <div class="menu-section">
-            <h2>Le Dolci Visioni</h2>
-            <div class="menu-item">
-                <div class="item-header">
-                    <span>Eclissi di Sottobosco</span>
-                    <span class="dots"></span>
-                    <span>€16</span>
-                </div>
-                <p class="description">Cubo di ganache al cioccolato Ecuador 72%, mousse al mirtillo, gelato alla fava Tonka e scaglie d'oro 24k.</p>
-            </div>
+    <span class="section-title">La Sintonia Terrestre</span>
+
+    <div class="menu-item">
+        <div class="item-header">
+            <span>Il Carrè dell'Atelier</span>
+            <span class="dots"></span>
+            <span class="price">€34</span>
         </div>
+        <p class="description">Costolette d'agnello in crosta di pistacchi di Bronte e clorofilla di erbe, carote baby al miele e vellutata di radici.</p>
+        <div class="gusto-focus">
+            "Il momento dell'assaggio è una rivelazione: la croccantezza sapida della crosta si scioglie in una carne incredibilmente tenera, sprigionando un'armonia di sapori che avvolge il palato in un calore profondo e persistente. Semplicemente divino."
+        </div>
+    </div>
 
+    <span class="section-title">Dolci Visioni</span>
+
+    <div class="menu-item">
+        <div class="item-header">
+            <span>Evoluzione al Mascarpone</span>
+            <span class="dots"></span>
+            <span class="price">€14</span>
+        </div>
+        <p class="description">Tiramisù moderno in calice: mousse leggera al mascarpone, cuore di savoiardo all'Arabica e cialde di corallo al caffè.</p>
+    </div>
+
+    <div class="menu-item">
+        <div class="item-header">
+            <span>Eclissi di Sottobosco</span>
+            <span class="dots"></span>
+            <span class="price">€16</span>
+        </div>
+        <p class="description">Cubo di ganache al cioccolato Ecuador 72%, cupola vellutata al mirtillo, gelato alla fava Tonka e scaglie d'oro 24k.</p>
     </div>
 
     <footer>
-        RISTORANTE ATELIER - VIA DELLE STELLE, 12 - ROMA
+        RISTORANTE ATELIER | ROMA | ESPERIENZA STELLATA
     </footer>
+</div>
 
 </body>
 </html>
