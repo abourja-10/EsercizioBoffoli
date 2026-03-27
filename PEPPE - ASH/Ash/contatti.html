@@ -20,11 +20,51 @@
         font-family: 'Playfair Display', serif;
         font-size: 50px;
     }
+    fieldset {
+        border: none;
+    }
+    label {display: block;}
+
+input[type=text], select {
+  width: 70%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+
     </style>
 </head>
 <body>
     <div id="container">
     <h1>PER PRENOTAZIONI O CONTATTARCI</h1>
+     <fieldset>
+        Inserire i dati e premere INVIO per vederne i risultati <br>
+        <label> Nome e Cognome:</label>
+         <input name="nome" type="text" required autofocus="autofocus"> <br>
+        Cliente abituale <input type="checkbox"> <br>
+        Provincia di residenza: <select name="citta" size="1">
+        <option value="Milano">Milano</option>
+        <option value="Como">Como</option>
+        <option value="Bergamo">Bergamo</option>
+        <option value="Lordi">Lordi</option>
+        <option value="Brescia">Brescia</option>
+        <option value="Sondrio">Sondrio</option>
+        <option value="Pavia">Pavia</option>
+        <option value="Monza">Monza</option>
+        <option value="Mantova">Mantova</option>
+        <option value="Cremona">Cremona</option>
+        </select> <br>
+        Testo Lettera: <br>
+        <input type="text"> <br>
+        <input type="reset" value="Reimposta">
+        <input type="reset" value="Invia">
+        
+    </fieldset>
 
     </div>
 
