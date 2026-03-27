@@ -1,73 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contatti</title>
-    <link rel="icon" type="image/x-icon" href="icona.jpg">
-     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <title>Prenotazione - Ateliere</title>
     <style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    h1 {
-        border: 1px solid #f3e5ab;
-        background-color: #f3e5ab;
-        color: #b38728;
-        text-align: center;
-        padding: 50px 50px;
-        font-family: 'Playfair Display', serif;
-        font-size: 50px;
-    }
-    fieldset {
-        border: none;
-    }
-    label {display: block;}
+        body {
+            background-color: white; /* Nero profondo */
+            color: #d4af37; /* Oro metallico */
+            font-family: 'Playfair Display', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+        }
 
-input[type=text], select {
-  width: 70%;
-  padding: 12px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
+      
+        h1 {
+            color: #d4af37; 
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
 
+        .booking-container {
+            background: white;
+            padding: 40px;
+            border: 1px solid #333;
+            border-radius: 2px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
 
+        .form-group {
+            margin-bottom: 25px;
+        }
 
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #d4af37;
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-bottom: 2px solid #fff;
+        }
+
+        /* Personalizzazione del menu a tendina */
+        option {
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #d4af37;
+            color: #0f0f0f;
+            border: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #fff;
+            letter-spacing: 4px;
+        }
+
+        .note {
+            font-size: 0.8rem;
+            color: #888;
+            text-align: center;
+            margin-top: 20px;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
-    <div id="container">
-    <h1>PER PRENOTAZIONI O CONTATTARCI</h1>
-     <fieldset>
-        Inserire i dati e premere INVIO per vederne i risultati <br>
-        <label> Nome e Cognome:</label>
-         <input name="nome" type="text" required autofocus="autofocus"> <br>
-        Cliente abituale <input type="checkbox"> <br>
-        Provincia di residenza: <select name="citta" size="1">
-        <option value="Milano">Milano</option>
-        <option value="Como">Como</option>
-        <option value="Bergamo">Bergamo</option>
-        <option value="Lordi">Lordi</option>
-        <option value="Brescia">Brescia</option>
-        <option value="Sondrio">Sondrio</option>
-        <option value="Pavia">Pavia</option>
-        <option value="Monza">Monza</option>
-        <option value="Mantova">Mantova</option>
-        <option value="Cremona">Cremona</option>
-        </select> <br>
-        Testo Lettera: <br>
-        <input type="text"> <br>
-        <input type="reset" value="Reimposta">
-        <input type="reset" value="Invia">
-        
-    </fieldset>
 
+    <h1>Ateliere Prenotazioni</h1>
+
+    <div class="booking-container">
+        <form action="#">
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Es. Giuseppe,Ach" required>
+            </div>
+
+            <div class="form-group">
+                <label for="data">Data della Visita</label>
+                <input type="date" id="data" name="data" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ospiti">Numero di Ospiti</label>
+                <select id="ospiti" name="ospiti">
+                    <option value="2">2 Persone</option>
+                    <option value="3">3 Persone</option>
+                    <option value="4">4 Persone</option>
+                    <option value="5+">Oltre 5 (Contattateci)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="richieste">Richieste Particolari o Allergie</label>
+                <textarea id="richieste" name="richieste" rows="3" placeholder="Note per lo Chef..."></textarea>
+            </div>
+
+            <button type="submit">Riserva il Tavolo</button>
+        </form>
+        <p class="note">L'esperienza gastronomica richiede puntualità.</p>
     </div>
 
-    
 </body>
 </html>

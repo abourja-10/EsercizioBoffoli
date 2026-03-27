@@ -7,13 +7,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     
     <style>
+        #index-menu {
+              background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('foto\ cameriere.jpg')  center center ;
+              background-size: cover;
+              min-height: 100vh;
+              color: white; /* Rende il testo bianco per leggibilità sullo sfondo scuro */
+              padding: 20px
+
+         }
+        
+        img    
+        {
+            width: 400px;
+            align-items: center;
+            border: 3px solid #c1a226;
+            margin-left: 270px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
         body {
             margin: 0;
             padding: 0;
             min-height: 100vh;
-            background: linear-gradient(135deg, #1a1a1a 0%, #3e2723 100%);
+            background: linear-gradient(135deg, #e7e1e1 0%, #e6d8d6 100%);
             background-attachment: fixed;
-            color: #f3e5ab;
+            color: #c1a226;
             font-family: 'Lato', sans-serif;
         }
 
@@ -79,8 +98,9 @@
             font-style: italic;
             font-size: 1.1rem;
             line-height: 1.6;
-            color: #d7ccc8;
+            color: linear-gradient(to right, #bf953f, #fcf6ba, #b38728);
             margin-top: 10px;
+            margin-left: 10px;
         }
 
         /* Box per la descrizione approfondita */
@@ -102,16 +122,51 @@
             font-size: 0.9rem;
             letter-spacing: 2px;
         }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728);
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url('foto\ icona')  center center ;
+
+        }
+
+      ul li a {
+        display: block;
+        color: #d4af37;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      ul li a:hover {
+      background-color: #111111
+      }
+      .nav {
+        display: flex;
+        justify-content: center; /* Centra tutto il blocco dei link */
+        align-items: center;     /* Allinea verticalmente (se serve) */
+        gap: 200px;               /* Qui decidi lo spazio esatto tra gli elementi */
+        padding: 20px;
+      }
     </style>
     <link rel="icon" type="image/x-icon" href="icona.jpg">
 </head>
 <body>
-
+<div id="index-menu">
 <div class="container">
+   
     <header>
         <h1>Atelier</h1>
         <p style="letter-spacing: 3px; color: #d4af37;">L'ARTE DELL'ALTA CUCINA</p>
     </header>
+    <ul class="nav">
+        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="index.html">Torna alla Home</a></li>
+        <li class="icon"></li>
+    </ul>
 
     <span class="section-title">Gli Esordi</span>
     
@@ -122,6 +177,7 @@
             <span class="price">€22</span>
         </div>
         <p class="description">Capasanta scottata alla griglia su caponata siciliana in agrodolce e petali eduli.</p>
+        <img src="foto1.jpg" alt="foto incontro profumato">
     </div>
 
     <span class="section-title">Orizzonti Marini</span>
@@ -133,6 +189,7 @@
             <span class="price">€28</span>
         </div>
         <p class="description">Ombrina scottata su vellutata di patate Ratte allo zafferano, frutti di bosco acidulati e fiori di borragine.</p>
+        <img src="foto2.jpg" alt="foto oro del tirreno">
     </div>
 
     <span class="section-title">La Sintonia Terrestre</span>
@@ -142,10 +199,12 @@
             <span>Il Carrè dell'Atelier</span>
             <span class="dots"></span>
             <span class="price">€34</span>
+           
         </div>
         <p class="description">Costolette d'agnello in crosta di pistacchi di Bronte e clorofilla di erbe, carote baby al miele e vellutata di radici.</p>
         <div class="gusto-focus">
             "Il momento dell'assaggio è una rivelazione: la croccantezza sapida della crosta si scioglie in una carne incredibilmente tenera, sprigionando un'armonia di sapori che avvolge il palato in un calore profondo e persistente. Semplicemente divino."
+             <img src="foto3.jpg" alt="foto carrè dell'atelier">
         </div>
     </div>
 
@@ -159,20 +218,25 @@
         </div>
         <p class="description">Tiramisù moderno in calice: mousse leggera al mascarpone, cuore di savoiardo all'Arabica e cialde di corallo al caffè.</p>
     </div>
+     <img src="foto4.png" alt="foto carrè dell'atelier">
 
     <div class="menu-item">
         <div class="item-header">
             <span>Eclissi di Sottobosco</span>
             <span class="dots"></span>
             <span class="price">€16</span>
+        <p class="description"> Entrambi le foto dei dolci sono qui su </p>
+       
         </div>
-        <p class="description">Cubo di ganache al cioccolato Ecuador 72%, cupola vellutata al mirtillo, gelato alla fava Tonka e scaglie d'oro 24k.</p>
+
+        
+
     </div>
 
     <footer>
         RISTORANTE ATELIER | ROMA | ESPERIENZA STELLATA
     </footer>
 </div>
-
+</div>
 </body>
 </html>
